@@ -1,0 +1,57 @@
+//
+//  SecondView.swift
+//  HoTechCourse
+//
+//  Created by 최강훈 on 2021/03/31.
+//
+
+import UIKit
+
+let DidChangeSecondViewHeightNotification: Notification.Name =
+    Notification.Name("DidChangeSecondViewHeightNotification")
+let userInfoSecondViewHeight:String = "SecondViewHeight"
+
+
+class SecondView: UIViewController {
+
+    @IBOutlet weak var label: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        self.label.numberOfLines = 0
+        self.label?.text = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        
+//        self.view.translatesAutoresizingMaskIntoConstraints = false
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//
+//        
+//        if let viewController = storyboard.instantiateViewController(identifier: "moduleBViewController") as? ModuleBViewController {
+//            addChild(viewController)
+//            self.view.addSubview(viewController.view)
+////            moduleAVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100)
+//
+//            }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: DidChangeSecondViewHeightNotification, object: nil, userInfo: [userInfoSecondViewHeight:self.label.frame.height])
+        
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
