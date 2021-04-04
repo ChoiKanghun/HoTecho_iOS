@@ -115,8 +115,7 @@ extension SensorTestViewController {
             self.attitudeRollLabel?.text = "Roll: \(deviceMotionData.attitude.roll * 10)"
             self.attitudeYawLabel?.text = "Yaw: \(deviceMotionData.attitude.yaw * 10)"
         })
-        let CMPedo = CMPedometer()
-        CMPedometer.startUpdates(CMPedo)
+        
     }
     
 }

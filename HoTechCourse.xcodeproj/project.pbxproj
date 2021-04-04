@@ -10,6 +10,7 @@
 		7A5C273026156F990048381F /* FourthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C272F26156F990048381F /* FourthTableViewCell.swift */; };
 		7A5C273726171A040048381F /* SensorTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C273626171A040048381F /* SensorTestViewController.swift */; };
 		7A5C273B26171A720048381F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5C273A26171A720048381F /* CoreMotion.framework */; };
+		7A5C273F26188AF60048381F /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C273E26188AF60048381F /* GPSViewController.swift */; };
 		7A71C21C2614679A009AF742 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C21B2614679A009AF742 /* FirstViewController.swift */; };
 		7A71C22026148DB4009AF742 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C21F26148DB4009AF742 /* FirstView.swift */; };
 		7A71C22326148DC0009AF742 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C22226148DC0009AF742 /* SecondView.swift */; };
@@ -29,6 +30,7 @@
 		7A5C272F26156F990048381F /* FourthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTableViewCell.swift; sourceTree = "<group>"; };
 		7A5C273626171A040048381F /* SensorTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTestViewController.swift; sourceTree = "<group>"; };
 		7A5C273A26171A720048381F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		7A5C273E26188AF60048381F /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		7A71C21B2614679A009AF742 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7A71C21F26148DB4009AF742 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7A71C22226148DC0009AF742 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				7A5C273626171A040048381F /* SensorTestViewController.swift */,
+				7A5C273E26188AF60048381F /* GPSViewController.swift */,
 			);
 			path = iOSSensors;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				7A71C22326148DC0009AF742 /* SecondView.swift in Sources */,
 				7A5C273726171A040048381F /* SensorTestViewController.swift in Sources */,
 				7AED7EF9260DAC6000512DE5 /* AppDelegate.swift in Sources */,
+				7A5C273F26188AF60048381F /* GPSViewController.swift in Sources */,
 				7AED7EFB260DAC6000512DE5 /* SceneDelegate.swift in Sources */,
 				7A71C22E26149412009AF742 /* XibTestViewController.swift in Sources */,
 				7A71C23626150249009AF742 /* ThirdViewCollectionViewCell.swift in Sources */,
