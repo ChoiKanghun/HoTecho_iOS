@@ -11,6 +11,7 @@
 		7A5C273726171A040048381F /* SensorTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C273626171A040048381F /* SensorTestViewController.swift */; };
 		7A5C273B26171A720048381F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5C273A26171A720048381F /* CoreMotion.framework */; };
 		7A5C273F26188AF60048381F /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C273E26188AF60048381F /* GPSViewController.swift */; };
+		7A5C2743261B02430048381F /* BlueToothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C2742261B02430048381F /* BlueToothViewController.swift */; };
 		7A71C21C2614679A009AF742 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C21B2614679A009AF742 /* FirstViewController.swift */; };
 		7A71C22026148DB4009AF742 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C21F26148DB4009AF742 /* FirstView.swift */; };
 		7A71C22326148DC0009AF742 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C22226148DC0009AF742 /* SecondView.swift */; };
@@ -24,6 +25,8 @@
 		7AED7F00260DAC6000512DE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AED7EFE260DAC6000512DE5 /* Main.storyboard */; };
 		7AED7F02260DAC6100512DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AED7F01260DAC6100512DE5 /* Assets.xcassets */; };
 		7AED7F05260DAC6100512DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AED7F03260DAC6100512DE5 /* LaunchScreen.storyboard */; };
+		7AFA09D2261ED4E200A7B168 /* ProximityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09D1261ED4E200A7B168 /* ProximityViewController.swift */; };
+		7AFA09D62622C0C500A7B168 /* FileLoadDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09D52622C0C500A7B168 /* FileLoadDownloadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,7 @@
 		7A5C273626171A040048381F /* SensorTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTestViewController.swift; sourceTree = "<group>"; };
 		7A5C273A26171A720048381F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7A5C273E26188AF60048381F /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
+		7A5C2742261B02430048381F /* BlueToothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToothViewController.swift; sourceTree = "<group>"; };
 		7A71C21B2614679A009AF742 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7A71C21F26148DB4009AF742 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7A71C22226148DC0009AF742 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		7AED7F01260DAC6100512DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AED7F04260DAC6100512DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AED7F06260DAC6100512DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AFA09D1261ED4E200A7B168 /* ProximityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityViewController.swift; sourceTree = "<group>"; };
+		7AFA09D52622C0C500A7B168 /* FileLoadDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoadDownloadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			children = (
 				7A5C273626171A040048381F /* SensorTestViewController.swift */,
 				7A5C273E26188AF60048381F /* GPSViewController.swift */,
+				7AFA09D1261ED4E200A7B168 /* ProximityViewController.swift */,
 			);
 			path = iOSSensors;
 			sourceTree = "<group>";
@@ -75,6 +82,14 @@
 				7A5C273A26171A720048381F /* CoreMotion.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A5C2741261B02380048381F /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C2742261B02430048381F /* BlueToothViewController.swift */,
+			);
+			path = BlueTooth;
 			sourceTree = "<group>";
 		};
 		7A71C1E426122043009AF742 /* FirstViewController */ = {
@@ -121,6 +136,8 @@
 		7AED7EF7260DAC6000512DE5 /* HoTechCourse */ = {
 			isa = PBXGroup;
 			children = (
+				7AFA09D42622C09D00A7B168 /* FileLoadAndDownload */,
+				7A5C2741261B02380048381F /* BlueTooth */,
 				7A5C27342617197B0048381F /* iOSSensors */,
 				7A71C1E426122043009AF742 /* FirstViewController */,
 				7AED7EF8260DAC6000512DE5 /* AppDelegate.swift */,
@@ -131,6 +148,14 @@
 				7AED7F06260DAC6100512DE5 /* Info.plist */,
 			);
 			path = HoTechCourse;
+			sourceTree = "<group>";
+		};
+		7AFA09D42622C09D00A7B168 /* FileLoadAndDownload */ = {
+			isa = PBXGroup;
+			children = (
+				7AFA09D52622C0C500A7B168 /* FileLoadDownloadViewController.swift */,
+			);
+			path = FileLoadAndDownload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,11 +232,14 @@
 				7A71C21C2614679A009AF742 /* FirstViewController.swift in Sources */,
 				7A71C22A26148DDC009AF742 /* FourthView.swift in Sources */,
 				7A71C22026148DB4009AF742 /* FirstView.swift in Sources */,
+				7A5C2743261B02430048381F /* BlueToothViewController.swift in Sources */,
 				7A71C22626148DCA009AF742 /* ThirdView.swift in Sources */,
 				7A71C22326148DC0009AF742 /* SecondView.swift in Sources */,
 				7A5C273726171A040048381F /* SensorTestViewController.swift in Sources */,
 				7AED7EF9260DAC6000512DE5 /* AppDelegate.swift in Sources */,
+				7AFA09D2261ED4E200A7B168 /* ProximityViewController.swift in Sources */,
 				7A5C273F26188AF60048381F /* GPSViewController.swift in Sources */,
+				7AFA09D62622C0C500A7B168 /* FileLoadDownloadViewController.swift in Sources */,
 				7AED7EFB260DAC6000512DE5 /* SceneDelegate.swift in Sources */,
 				7A71C22E26149412009AF742 /* XibTestViewController.swift in Sources */,
 				7A71C23626150249009AF742 /* ThirdViewCollectionViewCell.swift in Sources */,

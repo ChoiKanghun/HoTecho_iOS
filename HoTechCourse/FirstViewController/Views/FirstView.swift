@@ -7,9 +7,9 @@
 
 import UIKit
 
-let DidChangeFirstViewHeightNotification: Notification.Name =
-    Notification.Name("DidChangeFirstViewHeightNotification")
-let userInfoFirstViewHeight:String = "FirstViewHeight"
+let DidChangeAViewHeightNotification: Notification.Name =
+    Notification.Name("DidChangeAViewHeightNotification")
+let userInfoAViewHeight:String = "AViewHeight"
 
 
 class FirstView: UIViewController {
@@ -18,12 +18,14 @@ class FirstView: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        NotificationCenter.default.post(name: DidChangeFirstViewHeightNotification, object: nil, userInfo: [userInfoFirstViewHeight:self.label.frame.height])
+        NotificationCenter.default.post(name: DidChangeAViewHeightNotification, object: nil, userInfo: [userInfoAViewHeight:self.label.frame.height])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("AViewController called")
+        
         self.label.numberOfLines = 0
         self.label?.text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         
@@ -34,7 +36,7 @@ class FirstView: UIViewController {
 //        if let viewController = storyboard.instantiateViewController(identifier: "ModuleAViewController") as? ModuleAViewController {
 //            addChild(viewController)
 //            self.view.addSubview(viewController.view)
-////            FirstViewVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100)
+////            AViewVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100)
 //            viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 //            }
 //

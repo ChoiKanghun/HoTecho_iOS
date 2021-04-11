@@ -13,16 +13,18 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var sumOfHeightConstraints: NSLayoutConstraint!
     
-    @IBOutlet weak var secondViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var firstViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var BViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var AViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveHeightNotification(_:)), name: DidChangeFirstViewHeightNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveHeightNotification(_:)), name: DidChangeSecondViewHeightNotification, object: nil)
+        print("parent view controller called")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveHeightNotification(_:)), name: DidChangeAViewHeightNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveHeightNotification(_:)), name: DidChangeBViewHeightNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveHeightNotification(_:)), name: DidChangeCollectionViewHeightNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveHeightNotification(_:)), name: DidChangeTableViewHeightNotification, object: nil)
         
@@ -31,34 +33,34 @@ class FirstViewController: UIViewController {
     }
 
     @objc func didReceiveHeightNotification(_ noti: Notification) {
-        if noti.name == DidChangeFirstViewHeightNotification {
-            guard let moduleAHeight = noti.userInfo?[userInfoFirstViewHeight] as? CGFloat
+        if noti.name == DidChangeAViewHeightNotification {
+            guard let moduleAHeight = noti.userInfo?[userInfoAViewHeight] as? CGFloat
             else {
-                print("getting moduleAHeight on FirstViewController failure")
+                print("getting moduleAHeight on AViewController failure")
                 return
             }
             if (sumOfHeightConstraints.constant - moduleAHeight < 0) {
                 sumOfHeightConstraints.constant = moduleAHeight
             }
-            self.firstViewHeightConstraint.constant = moduleAHeight
+            self.AViewHeightConstraint.constant = moduleAHeight
 
-        } else if noti.name == DidChangeSecondViewHeightNotification  {
-            guard let SecondViewHeight = noti.userInfo?[userInfoSecondViewHeight] as? CGFloat
+        } else if noti.name == DidChangeBViewHeightNotification  {
+            guard let BViewHeight = noti.userInfo?[userInfoBViewHeight] as? CGFloat
             else {return}
             
-            let totalHeightConstant = self.firstViewHeightConstraint.constant
-                                        + SecondViewHeight
+            let totalHeightConstant = self.AViewHeightConstraint.constant
+                                        + BViewHeight
             if (sumOfHeightConstraints.constant - totalHeightConstant < 0) {
                 sumOfHeightConstraints.constant = totalHeightConstant
             }
-            self.secondViewHeightConstraint.constant = SecondViewHeight
+            self.BViewHeightConstraint.constant = BViewHeight
             
         } else if noti.name == DidChangeCollectionViewHeightNotification {
             guard let CollectionViewHeight = noti.userInfo?[userInfoCollectionViewHeight] as? CGFloat
             else {return}
             
-            let totalHeight = self.firstViewHeightConstraint.constant +
-                self.secondViewHeightConstraint.constant +
+            let totalHeight = self.AViewHeightConstraint.constant +
+                self.BViewHeightConstraint.constant +
                 CollectionViewHeight + self.tableViewHeightConstraint.constant
             if (sumOfHeightConstraints.constant -
                     totalHeight
@@ -71,8 +73,8 @@ class FirstViewController: UIViewController {
             guard let TableViewHeight = noti.userInfo?[userInfoTableViewHeight] as? CGFloat
             else {return}
             
-            let totalHeightConstant = self.firstViewHeightConstraint.constant +
-                self.secondViewHeightConstraint.constant +
+            let totalHeightConstant = self.AViewHeightConstraint.constant +
+                self.BViewHeightConstraint.constant +
                 self.collectionViewHeightConstraint.constant +
                 TableViewHeight
                 

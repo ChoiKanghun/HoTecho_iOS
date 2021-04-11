@@ -7,9 +7,9 @@
 
 import UIKit
 
-let DidChangeSecondViewHeightNotification: Notification.Name =
-    Notification.Name("DidChangeSecondViewHeightNotification")
-let userInfoSecondViewHeight:String = "SecondViewHeight"
+let DidChangeBViewHeightNotification: Notification.Name =
+    Notification.Name("DidChangeBViewHeightNotification")
+let userInfoBViewHeight:String = "BViewHeight"
 
 
 class SecondView: UIViewController {
@@ -19,6 +19,7 @@ class SecondView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("BViewController called")
         
         self.label.numberOfLines = 0
         self.label?.text = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
@@ -39,7 +40,7 @@ class SecondView: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.post(name: DidChangeSecondViewHeightNotification, object: nil, userInfo: [userInfoSecondViewHeight:self.label.frame.height])
+        NotificationCenter.default.post(name: DidChangeBViewHeightNotification, object: nil, userInfo: [userInfoBViewHeight:self.label.frame.height])
         
     }
     

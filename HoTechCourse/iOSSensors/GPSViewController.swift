@@ -85,23 +85,32 @@ extension GPSViewController: CLLocationManagerDelegate {
                 guard let heading = self.locationManager.heading?.trueHeading.binade
                 else {return}
                 
-                if(heading > 23 && heading <= 67) {
-                    self.compassLabel?.text = "북동" + "쪽";
-                } else if(heading > 68 && heading <= 112){
-                    self.compassLabel?.text = "동" + "쪽";
-                } else if(heading > 113 && heading <= 167){
-                    self.compassLabel?.text = "남동" + "쪽";
-                } else if(heading > 168 && heading <= 202){
-                    self.compassLabel?.text = "남" + "쪽";
-                } else if(heading > 203 && heading <= 247){
-                    self.compassLabel?.text = "남서" + "쪽";
-                } else if(heading > 248 && heading <= 293){
-                    self.compassLabel?.text = "서" + "쪽";
-                } else if(heading > 294 && heading <= 337){
-                    self.compassLabel?.text = "북서" + "쪽";
-                } else if(heading >= 338 || heading <= 22){
-                    self.compassLabel?.text = "북" + "쪽";
-                }
+                
+                
+//                if(heading > 23 && heading <= 67) {
+//                    self.compassLabel?.text = "북동" + "쪽";
+//                } else if(heading > 68 && heading <= 112){
+//                    self.compassLabel?.text = "동" + "쪽";
+//                } else if(heading > 113 && heading <= 167){
+//                    self.compassLabel?.text = "남동" + "쪽";
+//                } else if(heading > 168 && heading <= 202){
+//                    self.compassLabel?.text = "남" + "쪽";
+//                } else if(heading > 203 && heading <= 247){
+//                    self.compassLabel?.text = "남서" + "쪽";
+//                } else if(heading > 248 && heading <= 293){
+//                    self.compassLabel?.text = "서" + "쪽";
+//                } else if(heading > 294 && heading <= 337){
+//                    self.compassLabel?.text = "북서" + "쪽";
+//                } else if(heading >= 338 || heading <= 22){
+//                    self.compassLabel?.text = "북" + "쪽";
+//                }
+//
+                // 이전 -> 이후
+                
+                let direction: [String] = ["북쪽", "북동쪽", "동쪽", "남동쪽", "남쪽", "남서쪽", "서쪽", "북서쪽"]
+                let index:Int = Int((heading + 22.5).truncatingRemainder(dividingBy: 360) / 45)
+                print(index)
+                self.compassLabel?.text = direction[index]
                 
 //                print("name:\(address.last?.name)")
 //                print("isoCountryCode: \(address.last?.isoCountryCode)")

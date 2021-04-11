@@ -19,6 +19,8 @@ class ThirdView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("CollectionViewController called")
+        
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
     }
@@ -52,7 +54,7 @@ extension ThirdView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "thirdViewCollectionViewCell", for: indexPath) as? ThirdViewCollectionViewCell
         else {return UICollectionViewCell()}
-        cell.backgroundColor = .orange
+        cell.backgroundColor = .green
         cell.label.text = "\(indexPath.row)"
         return cell
     }

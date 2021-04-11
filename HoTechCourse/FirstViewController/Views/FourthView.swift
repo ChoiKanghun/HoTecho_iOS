@@ -21,6 +21,8 @@ class FourthView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("tableViewController called")
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
 

@@ -50,6 +50,10 @@
 		<string>armv7</string>
 		<string>accelerometer</string>
 	</array>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>블루투스 이용에 동의하십니까?(ios13 이상)</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>블루투스 이용에 동의하십니까?(ios12 이하)</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
