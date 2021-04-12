@@ -313,6 +313,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iWN-wN-HC8">
+                        <barButtonItem key="leftBarButtonItem" title="SQLite" id="Q52-gu-oZR">
+                            <connections>
+                                <segue destination="Yww-MR-f2x" kind="show" id="IbX-Bn-z1v"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="PDF" id="d7m-lV-9Lf">
                             <connections>
                                 <segue destination="J68-8V-Wda" kind="show" id="POo-JR-73f"/>
@@ -395,15 +400,11 @@
                         <viewLayoutGuide key="safeArea" id="nhb-08-8dh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="sublineTF" destination="cQm-hh-2Zt" id="npb-Pf-npv"/>
-                        <outlet property="titleTF" destination="36G-hs-vad" id="RLG-xh-JxI"/>
-                        <outlet property="todayDateTF" destination="HRU-v1-8VK" id="b1h-M9-Pi6"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="kav-IN-R78"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6V-0M-Ui2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6700" y="1087"/>
+            <point key="canvasLocation" x="-6700.0000000000009" y="1086.8303571428571"/>
         </scene>
         <!--Download View Controller-->
         <scene sceneID="p8C-wq-l9d">

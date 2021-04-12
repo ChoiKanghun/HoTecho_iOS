@@ -87,7 +87,7 @@ extension GPSViewController: CLLocationManagerDelegate {
                 
                 
                 
-//                if(heading > 23 && heading <= 67) {
+//                if(heading > 23 && heading <= 67) 
 //                    self.compassLabel?.text = "북동" + "쪽";
 //                } else if(heading > 68 && heading <= 112){
 //                    self.compassLabel?.text = "동" + "쪽";
