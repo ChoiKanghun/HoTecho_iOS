@@ -27,6 +27,8 @@
 		7AED7F05260DAC6100512DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AED7F03260DAC6100512DE5 /* LaunchScreen.storyboard */; };
 		7AFA09D2261ED4E200A7B168 /* ProximityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09D1261ED4E200A7B168 /* ProximityViewController.swift */; };
 		7AFA09D62622C0C500A7B168 /* FileLoadDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09D52622C0C500A7B168 /* FileLoadDownloadViewController.swift */; };
+		7AFA09DA2623B5B100A7B168 /* PDFDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09D92623B5B100A7B168 /* PDFDownloadViewController.swift */; };
+		7AFA09DE2623F81C00A7B168 /* SQLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09DD2623F81C00A7B168 /* SQLiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		7AED7F06260DAC6100512DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AFA09D1261ED4E200A7B168 /* ProximityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityViewController.swift; sourceTree = "<group>"; };
 		7AFA09D52622C0C500A7B168 /* FileLoadDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoadDownloadViewController.swift; sourceTree = "<group>"; };
+		7AFA09D92623B5B100A7B168 /* PDFDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDownloadViewController.swift; sourceTree = "<group>"; };
+		7AFA09DD2623F81C00A7B168 /* SQLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 		7AED7EF7260DAC6000512DE5 /* HoTechCourse */ = {
 			isa = PBXGroup;
 			children = (
+				7AFA09DC2623F80D00A7B168 /* LocalDB */,
 				7AFA09D42622C09D00A7B168 /* FileLoadAndDownload */,
 				7A5C2741261B02380048381F /* BlueTooth */,
 				7A5C27342617197B0048381F /* iOSSensors */,
@@ -154,8 +159,17 @@
 			isa = PBXGroup;
 			children = (
 				7AFA09D52622C0C500A7B168 /* FileLoadDownloadViewController.swift */,
+				7AFA09D92623B5B100A7B168 /* PDFDownloadViewController.swift */,
 			);
 			path = FileLoadAndDownload;
+			sourceTree = "<group>";
+		};
+		7AFA09DC2623F80D00A7B168 /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				7AFA09DD2623F81C00A7B168 /* SQLiteViewController.swift */,
+			);
+			path = LocalDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,10 +250,12 @@
 				7A71C22626148DCA009AF742 /* ThirdView.swift in Sources */,
 				7A71C22326148DC0009AF742 /* SecondView.swift in Sources */,
 				7A5C273726171A040048381F /* SensorTestViewController.swift in Sources */,
+				7AFA09DE2623F81C00A7B168 /* SQLiteViewController.swift in Sources */,
 				7AED7EF9260DAC6000512DE5 /* AppDelegate.swift in Sources */,
 				7AFA09D2261ED4E200A7B168 /* ProximityViewController.swift in Sources */,
 				7A5C273F26188AF60048381F /* GPSViewController.swift in Sources */,
 				7AFA09D62622C0C500A7B168 /* FileLoadDownloadViewController.swift in Sources */,
+				7AFA09DA2623B5B100A7B168 /* PDFDownloadViewController.swift in Sources */,
 				7AED7EFB260DAC6000512DE5 /* SceneDelegate.swift in Sources */,
 				7A71C22E26149412009AF742 /* XibTestViewController.swift in Sources */,
 				7A71C23626150249009AF742 /* ThirdViewCollectionViewCell.swift in Sources */,
