@@ -1,16 +1,10 @@
-//
-//  DBHelper.swift
-//  HoTechCourse
-//
-//  Created by 최강훈 on 2021/04/12.
-//
-
 import Foundation
 import SQLite3
 
 class DBHelper {
     var db: OpaquePointer?
-    var path: String = "myDB.sqlite" // DB_name, 확장자 지킬 것.
+    var path: String = "crudTestDB.sqlite"
+    
     init() {
         self.db = createDB()
         self.createTable()
@@ -20,32 +14,30 @@ class DBHelper {
         let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathExtension(path)
     
         var db: OpaquePointer? = nil
-        
-        // return something into db(2nd parameter)
+    
         if sqlite3_open(filePath.path, &db) != SQLITE_OK {
-            print("There is error in creating DB")
+          print("Error while creating db")
+          return nil
         } else {
-            print("Database has been created with path \(path)")
-            print("path to DB is : \(filePath.path)")
-            return db
+          print("Database has been created with path \(path)")
+          return db
         }
-        
-        return db
     }
     
     func createTable() {
-        let query = "CREATE TABLE IF NOT EXISTS grade(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, avg INTEGER, result TEXT, list TEXT);"
-        var createTable: OpaquePointer? = nil
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS pedo(id INTEGER PRIMARY KEY AUTOINCREMENT, latitude DOUBLE, longtitude DOUBLE);"
         
-        if sqlite3_prepare_v2(self.db, query, -1, &createTable, nil) == SQLITE_OK {
-            if sqlite3_step(createTable) == SQLITE_DONE {
-                print("table creation success")
+        var createTablePtr: OpaquePointer? = nil
+        
+        if sqlite3_prepare_v2(self.db, createTableQuery, -1, &createTablePtr, nil) == SQLITE_OK {
+            if sqlite3_step(createTablePtr) == SQLITE_DONE {
+                print("table creation has been successfully done")
             }
             else {
-                print("table creation Failed")
+                print("table creation failure")
             }
         } else {
-            print("sqlite3 prepare v2 error")
+            print("Preparation for creating table has been failed")
         }
     }
 }
