@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,20 @@
 		7A71C22E26149412009AF742 /* XibTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C22C26149412009AF742 /* XibTestViewController.swift */; };
 		7A71C22F26149412009AF742 /* XibTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A71C22D26149412009AF742 /* XibTestViewController.xib */; };
 		7A71C23626150249009AF742 /* ThirdViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71C23526150249009AF742 /* ThirdViewCollectionViewCell.swift */; };
+		7AA480C7263FE78700B2D56B /* PickupLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480C6263FE78700B2D56B /* PickupLines.swift */; };
+		7AA480CA263FF0C300B2D56B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA480C9263FF0C300B2D56B /* Realm */; };
+		7AA480CC263FF0C300B2D56B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA480CB263FF0C300B2D56B /* RealmSwift */; };
+		7AA480CE264105CE00B2D56B /* PickupLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480CD264105CE00B2D56B /* PickupLineTableViewCell.swift */; };
+		7AA480D0264107DC00B2D56B /* PickupLinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480CF264107DC00B2D56B /* PickupLinesViewController.swift */; };
+		7AA480D226410E9D00B2D56B /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480D126410E9D00B2D56B /* AlertService.swift */; };
+		7AA480D426412F7F00B2D56B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480D326412F7F00B2D56B /* RealmService.swift */; };
+		7AA480D7264189DF00B2D56B /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480D6264189DF00B2D56B /* WebKitViewController.swift */; };
+		7AA480DC2643A0FC00B2D56B /* TrackMyTraceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480DB2643A0FC00B2D56B /* TrackMyTraceViewController.swift */; };
+		7AA480DE2643F78C00B2D56B /* Trace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480DD2643F78C00B2D56B /* Trace.swift */; };
+		7AA480E22643FEB700B2D56B /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480E12643FEB700B2D56B /* RealmHelper.swift */; };
+		7AA480E4264404F100B2D56B /* TraceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480E3264404F100B2D56B /* TraceListViewController.swift */; };
+		7AA480E626440A9500B2D56B /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480E526440A9500B2D56B /* TrackData.swift */; };
+		7AA480E82644169A00B2D56B /* TraceInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA480E72644169A00B2D56B /* TraceInfoTableViewCell.swift */; };
 		7ACB907A263BE9B300A81F60 /* traceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9079263BE9B300A81F60 /* traceViewController.swift */; };
 		7AED7EF9260DAC6000512DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED7EF8260DAC6000512DE5 /* AppDelegate.swift */; };
 		7AED7EFB260DAC6000512DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED7EFA260DAC6000512DE5 /* SceneDelegate.swift */; };
@@ -32,9 +46,11 @@
 		7AFA09DE2623F81C00A7B168 /* SQLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09DD2623F81C00A7B168 /* SQLiteViewController.swift */; };
 		7AFA09E226241D6900A7B168 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09E126241D6900A7B168 /* Grade.swift */; };
 		7AFA09E526241E0A00A7B168 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA09E426241E0A00A7B168 /* DBHelper.swift */; };
+		819111AD4BCA649C12786243 /* Pods_HoTechCourse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD181BAAD118E098B255C1A0 /* Pods_HoTechCourse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53D108D82D962046D2DB6E06 /* Pods-HoTechCourse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoTechCourse.debug.xcconfig"; path = "Target Support Files/Pods-HoTechCourse/Pods-HoTechCourse.debug.xcconfig"; sourceTree = "<group>"; };
 		7A5C272F26156F990048381F /* FourthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTableViewCell.swift; sourceTree = "<group>"; };
 		7A5C273626171A040048381F /* SensorTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTestViewController.swift; sourceTree = "<group>"; };
 		7A5C273A26171A720048381F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -48,6 +64,18 @@
 		7A71C22C26149412009AF742 /* XibTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibTestViewController.swift; sourceTree = "<group>"; };
 		7A71C22D26149412009AF742 /* XibTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibTestViewController.xib; sourceTree = "<group>"; };
 		7A71C23526150249009AF742 /* ThirdViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		7AA480C6263FE78700B2D56B /* PickupLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupLines.swift; sourceTree = "<group>"; };
+		7AA480CD264105CE00B2D56B /* PickupLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupLineTableViewCell.swift; sourceTree = "<group>"; };
+		7AA480CF264107DC00B2D56B /* PickupLinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupLinesViewController.swift; sourceTree = "<group>"; };
+		7AA480D126410E9D00B2D56B /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		7AA480D326412F7F00B2D56B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		7AA480D6264189DF00B2D56B /* WebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
+		7AA480DB2643A0FC00B2D56B /* TrackMyTraceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMyTraceViewController.swift; sourceTree = "<group>"; };
+		7AA480DD2643F78C00B2D56B /* Trace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trace.swift; sourceTree = "<group>"; };
+		7AA480E12643FEB700B2D56B /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		7AA480E3264404F100B2D56B /* TraceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceListViewController.swift; sourceTree = "<group>"; };
+		7AA480E526440A9500B2D56B /* TrackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackData.swift; sourceTree = "<group>"; };
+		7AA480E72644169A00B2D56B /* TraceInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceInfoTableViewCell.swift; sourceTree = "<group>"; };
 		7ACB9079263BE9B300A81F60 /* traceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traceViewController.swift; sourceTree = "<group>"; };
 		7AED7EF5260DAC6000512DE5 /* HoTechCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoTechCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AED7EF8260DAC6000512DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +90,8 @@
 		7AFA09DD2623F81C00A7B168 /* SQLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteViewController.swift; sourceTree = "<group>"; };
 		7AFA09E126241D6900A7B168 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		7AFA09E426241E0A00A7B168 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		EAD32CFF3D333C89C99FBEF1 /* Pods-HoTechCourse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoTechCourse.release.xcconfig"; path = "Target Support Files/Pods-HoTechCourse/Pods-HoTechCourse.release.xcconfig"; sourceTree = "<group>"; };
+		FD181BAAD118E098B255C1A0 /* Pods_HoTechCourse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoTechCourse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA480CC263FF0C300B2D56B /* RealmSwift in Frameworks */,
+				7AA480CA263FF0C300B2D56B /* Realm in Frameworks */,
 				7A5C273B26171A720048381F /* CoreMotion.framework in Frameworks */,
+				819111AD4BCA649C12786243 /* Pods_HoTechCourse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				7A5C273A26171A720048381F /* CoreMotion.framework */,
+				FD181BAAD118E098B255C1A0 /* Pods_HoTechCourse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,9 +158,35 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7AA480D5264189CA00B2D56B /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				7AA480D6264189DF00B2D56B /* WebKitViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		7AA480DA2643A0D100B2D56B /* TrackMyTrace */ = {
+			isa = PBXGroup;
+			children = (
+				7AA480DB2643A0FC00B2D56B /* TrackMyTraceViewController.swift */,
+				7AA480DD2643F78C00B2D56B /* Trace.swift */,
+				7AA480E12643FEB700B2D56B /* RealmHelper.swift */,
+				7AA480E3264404F100B2D56B /* TraceListViewController.swift */,
+				7AA480E526440A9500B2D56B /* TrackData.swift */,
+				7AA480E72644169A00B2D56B /* TraceInfoTableViewCell.swift */,
+			);
+			path = TrackMyTrace;
+			sourceTree = "<group>";
+		};
 		7ACB9078263BE98C00A81F60 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				7AA480C6263FE78700B2D56B /* PickupLines.swift */,
+				7AA480CD264105CE00B2D56B /* PickupLineTableViewCell.swift */,
+				7AA480CF264107DC00B2D56B /* PickupLinesViewController.swift */,
+				7AA480D126410E9D00B2D56B /* AlertService.swift */,
+				7AA480D326412F7F00B2D56B /* RealmService.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -139,6 +199,7 @@
 				7AED7EF7260DAC6000512DE5 /* HoTechCourse */,
 				7AED7EF6260DAC6000512DE5 /* Products */,
 				7A5C273926171A720048381F /* Frameworks */,
+				C30D2BB3CD1C28D5B7D0DCE2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +214,8 @@
 		7AED7EF7260DAC6000512DE5 /* HoTechCourse */ = {
 			isa = PBXGroup;
 			children = (
+				7AA480DA2643A0D100B2D56B /* TrackMyTrace */,
+				7AA480D5264189CA00B2D56B /* WebView */,
 				7ACB9078263BE98C00A81F60 /* Realm */,
 				7AFA09DC2623F80D00A7B168 /* LocalDB */,
 				7AFA09D42622C09D00A7B168 /* FileLoadAndDownload */,
@@ -189,6 +252,15 @@
 			path = LocalDB;
 			sourceTree = "<group>";
 		};
+		C30D2BB3CD1C28D5B7D0DCE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53D108D82D962046D2DB6E06 /* Pods-HoTechCourse.debug.xcconfig */,
+				EAD32CFF3D333C89C99FBEF1 /* Pods-HoTechCourse.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AED7F09260DAC6100512DE5 /* Build configuration list for PBXNativeTarget "HoTechCourse" */;
 			buildPhases = (
+				A22048CC82DC0B0951B26B21 /* [CP] Check Pods Manifest.lock */,
 				7AED7EF1260DAC6000512DE5 /* Sources */,
 				7AED7EF2260DAC6000512DE5 /* Frameworks */,
 				7AED7EF3260DAC6000512DE5 /* Resources */,
@@ -205,6 +278,10 @@
 			dependencies = (
 			);
 			name = HoTechCourse;
+			packageProductDependencies = (
+				7AA480C9263FF0C300B2D56B /* Realm */,
+				7AA480CB263FF0C300B2D56B /* RealmSwift */,
+			);
 			productName = HoTechCourse;
 			productReference = 7AED7EF5260DAC6000512DE5 /* HoTechCourse.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +309,9 @@
 				Base,
 			);
 			mainGroup = 7AED7EEC260DAC6000512DE5;
+			packageReferences = (
+				7AA480C8263FF0C300B2D56B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 7AED7EF6260DAC6000512DE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,6 +335,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A22048CC82DC0B0951B26B21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoTechCourse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AED7EF1260DAC6000512DE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +369,8 @@
 				7A71C22A26148DDC009AF742 /* FourthView.swift in Sources */,
 				7A71C22026148DB4009AF742 /* FirstView.swift in Sources */,
 				7A5C2743261B02430048381F /* BlueToothViewController.swift in Sources */,
+				7AA480C7263FE78700B2D56B /* PickupLines.swift in Sources */,
+				7AA480E22643FEB700B2D56B /* RealmHelper.swift in Sources */,
 				7A71C22626148DCA009AF742 /* ThirdView.swift in Sources */,
 				7A71C22326148DC0009AF742 /* SecondView.swift in Sources */,
 				7A5C273726171A040048381F /* SensorTestViewController.swift in Sources */,
@@ -273,13 +380,23 @@
 				7A5C273F26188AF60048381F /* GPSViewController.swift in Sources */,
 				7AFA09E226241D6900A7B168 /* Grade.swift in Sources */,
 				7AFA09D62622C0C500A7B168 /* FileLoadDownloadViewController.swift in Sources */,
+				7AA480D7264189DF00B2D56B /* WebKitViewController.swift in Sources */,
 				7AFA09DA2623B5B100A7B168 /* PDFDownloadViewController.swift in Sources */,
 				7ACB907A263BE9B300A81F60 /* traceViewController.swift in Sources */,
 				7AFA09E526241E0A00A7B168 /* DBHelper.swift in Sources */,
 				7AED7EFB260DAC6000512DE5 /* SceneDelegate.swift in Sources */,
+				7AA480D0264107DC00B2D56B /* PickupLinesViewController.swift in Sources */,
+				7AA480E82644169A00B2D56B /* TraceInfoTableViewCell.swift in Sources */,
+				7AA480E626440A9500B2D56B /* TrackData.swift in Sources */,
 				7A71C22E26149412009AF742 /* XibTestViewController.swift in Sources */,
+				7AA480DC2643A0FC00B2D56B /* TrackMyTraceViewController.swift in Sources */,
 				7A71C23626150249009AF742 /* ThirdViewCollectionViewCell.swift in Sources */,
 				7A5C273026156F990048381F /* FourthTableViewCell.swift in Sources */,
+				7AA480D226410E9D00B2D56B /* AlertService.swift in Sources */,
+				7AA480DE2643F78C00B2D56B /* Trace.swift in Sources */,
+				7AA480CE264105CE00B2D56B /* PickupLineTableViewCell.swift in Sources */,
+				7AA480E4264404F100B2D56B /* TraceListViewController.swift in Sources */,
+				7AA480D426412F7F00B2D56B /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +540,7 @@
 		};
 		7AED7F0A260DAC6100512DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D108D82D962046D2DB6E06 /* Pods-HoTechCourse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,6 +561,7 @@
 		};
 		7AED7F0B260DAC6100512DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD32CFF3D333C89C99FBEF1 /* Pods-HoTechCourse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +602,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7AA480C8263FF0C300B2D56B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AA480C9263FF0C300B2D56B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA480C8263FF0C300B2D56B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		7AA480CB263FF0C300B2D56B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA480C8263FF0C300B2D56B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AED7EED260DAC6000512DE5 /* Project object */;
 }
