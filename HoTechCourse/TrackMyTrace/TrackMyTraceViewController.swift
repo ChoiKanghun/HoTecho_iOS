@@ -24,6 +24,8 @@ class TrackMyTraceViewController: UIViewController {
         manager.delegate = self
         return manager
      }()
+    
+    var previousCoordinate: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +37,19 @@ class TrackMyTraceViewController: UIViewController {
         MapView.showsUserLocation = true
         // 현재 내 위치 기준으로 지도를 움직임.
         self.MapView.setUserTrackingMode(.follow, animated: true)
-
-
+        
+        self.MapView.isZoomEnabled = true
+        self.MapView.delegate = self
+        
         self.trackData.date = Date()
     }
     
     func getLocationUsagePermission() {
         self.locationManager.requestWhenInUseAuthorization()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.locationManager.stopUpdatingLocation()
     }
     
     @IBAction func touchUpShowCurrentLocation(_ sender: Any) {
@@ -54,7 +62,9 @@ class TrackMyTraceViewController: UIViewController {
     @IBAction func touchUpTrackStopButton(_ sender: Any) {
         self.locationManager.stopUpdatingLocation()
         RealmHelper.shared.create(trackData)
-        dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -82,13 +92,45 @@ extension TrackMyTraceViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location = locations.last
-        guard let latitude = location?.coordinate.latitude
+
+        guard let location = locations.last
         else {return}
-        guard let longtitude = location?.coordinate.longitude
-        else {return}
+        let latitude = location.coordinate.latitude
+        let longtitude = location.coordinate.longitude
+
+        self.labelLocationInfo1?.text
+            = "위도: \(latitude) / 경도: \(longtitude)"
+        
+        if let previousCoordinate = self.previousCoordinate {
+            var points: [CLLocationCoordinate2D] = []
+            let point1 = CLLocationCoordinate2DMake(previousCoordinate.latitude, previousCoordinate.longitude)
+            let point2: CLLocationCoordinate2D
+            = CLLocationCoordinate2DMake(latitude, longtitude)
+            points.append(point1)
+            points.append(point2)
+            let lineDraw = MKPolyline(coordinates: points, count:points.count)
+            self.MapView.addOverlay(lineDraw)
+        }
+        
+        self.previousCoordinate = location.coordinate
         
         let newTrace = Trace(latitude: latitude, longtitude: longtitude)
         self.trackData.appendTrace(trace: newTrace)
+    }
+}
+
+extension TrackMyTraceViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let polyLine = overlay as? MKPolyline
+        else {
+            print("can't draw polyline")
+            return MKOverlayRenderer()
+        }
+        let renderer = MKPolylineRenderer(polyline: polyLine)
+            renderer.strokeColor = .orange
+            renderer.lineWidth = 5.0
+            renderer.alpha = 1.0
+ 
+        return renderer
     }
 }

@@ -342,16 +342,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dij-fj-Mt6">
-                                <rect key="frame" x="20" y="20" width="374" height="637"/>
+                                <rect key="frame" x="20" y="20" width="374" height="643.5"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCh-hN-dSH">
-                                <rect key="frame" x="20" y="677" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="683.5" width="374" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY0-6W-Dcr">
-                                <rect key="frame" x="344" y="587" width="30" height="30"/>
+                                <rect key="frame" x="344" y="593.5" width="30" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="PPr-Gg-FNN"/>
@@ -401,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNH-Be-4eH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4994.202898550725" y="1599.7767857142856"/>
+            <point key="canvasLocation" x="-4959" y="1333"/>
         </scene>
         <!--Lite View Controller-->
         <scene sceneID="Dxb-Rt-wq4">
@@ -1343,6 +1343,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7z-m6-OWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5789.8550724637689" y="1599.7767857142856"/>
+        </scene>
+        <!--Show Track View Controller-->
+        <scene sceneID="4uC-JF-ggZ">
+            <objects>
+                <viewController storyboardIdentifier="showTrackViewController" id="y5i-hg-oLk" customClass="ShowTrackViewController" customModule="HoTechCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="INK-NK-aTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ym3-bT-wnN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dLf-Qm-56p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dLf-Qm-56p" firstAttribute="trailing" secondItem="ym3-bT-wnN" secondAttribute="trailing" id="Wm6-VE-4j7"/>
+                            <constraint firstItem="dLf-Qm-56p" firstAttribute="bottom" secondItem="ym3-bT-wnN" secondAttribute="bottom" id="aYo-6C-34f"/>
+                            <constraint firstItem="ym3-bT-wnN" firstAttribute="leading" secondItem="dLf-Qm-56p" secondAttribute="leading" id="d69-WK-YIJ"/>
+                            <constraint firstItem="ym3-bT-wnN" firstAttribute="top" secondItem="dLf-Qm-56p" secondAttribute="top" id="n8G-hO-a1E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ym3-bT-wnN" id="jDu-ME-gOC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ow-1k-QjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4963" y="2004"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NiL-Jf-0CT">

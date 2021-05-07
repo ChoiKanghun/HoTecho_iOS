@@ -26,5 +26,15 @@ class RealmHelper {
         }
     }
     
+    func  delete<T: Object>(_ object: T) {
+        do {
+            try realm.write {
+                realm.delete(object)
+            }
+        } catch {
+            print("realm delete Error: \(error)")
+        }
+    }
+    
     
 }

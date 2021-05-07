@@ -26,7 +26,6 @@ class TraceListViewController: UIViewController {
         
         notificationToken = TrackDatas.observe { (changes) in
             self.tableView.reloadData()
-            print("changes: \(changes)")
         }
     }
 
@@ -45,11 +44,28 @@ extension TraceListViewController: UITableViewDataSource {
         
         let trackData = self.TrackDatas[indexPath.row]
         cell.labelDate?.text = trackData.formattedDate() + "의 기록"
-        print("trackData\(indexPath.row): \(trackData)")
         return cell
     }
 }
 
 extension TraceListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trackData = self.TrackDatas[indexPath.row]
+        let traces: List<Trace> = trackData.traces
+        
+        let mainStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let nextViewController = mainStoryBoard.instantiateViewController(identifier: "showTrackViewController") as! ShowTrackViewController
+        // make sure view is loaded
+        nextViewController.traces = traces
+        _ = nextViewController.view
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        
+        let trackData = TrackDatas[indexPath.row]
+        RealmHelper.shared.delete(trackData)
+    }
 }
